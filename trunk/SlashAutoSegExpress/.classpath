@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Postgres"/>
+	<classpathentry kind="lib" path="C:/JAVA_LIB/gwt_incubator-2.1/gwt-incubator-20101117-r1766.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

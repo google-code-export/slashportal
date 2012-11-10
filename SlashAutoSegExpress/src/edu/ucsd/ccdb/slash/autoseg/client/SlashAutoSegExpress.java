@@ -70,6 +70,8 @@ public class SlashAutoSegExpress implements EntryPoint {
 	int nameMax = 50;
 	Vector<DatasetModelInfo> vmodel = new Vector<DatasetModelInfo>();
 	Button modelBtn = new Button("Training Model");
+	
+	SelectModelPanel smodelPanel = null;
 	public void setSlashImages(Vector<SlashImage> imageV)
 	{
 		this.imageV = imageV;
@@ -80,6 +82,8 @@ public class SlashAutoSegExpress implements EntryPoint {
 	public void udpateModelInfo(Vector<DatasetModelInfo> vmodel)
 	{
 		this.vmodel = vmodel;
+		 smodelPanel = new SelectModelPanel(this.vmodel);
+		smodelPanel.show();
 	}
 	
 	public void setTrainingImage(SlashImage timage, String itype)

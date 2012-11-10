@@ -39,6 +39,7 @@ public class AutoSegExpressExc {
 			           {
 			        	   Vector<DatasetModelInfo> vmodel = (Vector<DatasetModelInfo>)o;
 			        	   System.out.println("-------------------getDatasetModelInfo:"+vmodel);
+			        	   segExp.udpateModelInfo(vmodel);
 			           }
 		           
 

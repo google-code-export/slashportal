@@ -1,6 +1,5 @@
 package edu.ucsd.ccdb.slash.autoseg.server;
 import  edu.ucsd.ccdb.slash.autoseg.client.*;
-import edu.ucsd.ccdb.slash.autoseg.client.DatasetModelInfo;
 
 
 import java.util.*;
@@ -14,7 +13,7 @@ public class SlashDBUtil
 	public Vector<DatasetModelInfo> getDatasetModelInfo(long datasetID)throws Exception
 	{
 		Vector<DatasetModelInfo> v = new Vector<DatasetModelInfo>();
-		String sql = " select distinct version_number, count(annotation_id) from slash_annotation where dataset_id = "+datasetID+" group by version_number";
+		String sql = " select distinct version_number, count(annotation_id), version_nickname from slash_annotation where dataset_id = "+datasetID+" group by version_number,version_nickname";
 		Connection c = db.getConnection();
 		PreparedStatement ps = c.prepareStatement(sql);
 		//ps.setLong(1, datasetID);
@@ -25,9 +24,14 @@ public class SlashDBUtil
 			DatasetModelInfo info = new DatasetModelInfo();
 			Integer modelID = rs.getInt(1);
 			Integer count = rs.getInt(2);
+			String modelName = rs.getString("version_nickname");
+			
 			
 			info.setModelID(modelID);
 			info.setCount(count);
+			info.setModelName(modelName);
+			info.setDatasetID(datasetID);
+			
 			v.addElement(info);
 		}
 		c.close();
@@ -350,9 +354,11 @@ public class SlashDBUtil
 	public static void main(String[] args)throws Exception
 	{
 		SlashDBUtil util = new SlashDBUtil();
-		Vector v = util.getSlashImages("ccdbuser");
-		
-		System.out.println(v.size());
+		//Vector v = util.getSlashImages("ccdbuser");
+		SlashDBService db = new SlashDBService();
+        db.readConfig("E:\\slash-db-config.properties");
+		//System.out.println(v.size());
+		util.getDatasetModelInfo(504052);
 	}
 	
 

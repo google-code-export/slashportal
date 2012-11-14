@@ -9,6 +9,7 @@ public class Constants {
 	public static String imagePrefix ="http://ccdb-portal.crbs.ucsd.edu:8081/Data_browser_image_servlet/GetIRODIMageServlet?filePath=";
 
 	public static SlashImage trainImage = null;
+	public static SlashImage inputImage = null;
 	
 	public static DatasetModelInfo modelInfo = null;
 }

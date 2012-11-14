@@ -112,7 +112,7 @@ public class SlashAutoSegExpress implements EntryPoint {
 	public void setTrainingImage(SlashImage timage, String itype)
 	{
 		System.out.println("Training image-----------------:"+timage);
-		Constants.trainImage = timage;
+		
 		tpanel.setVisible(false);
 		String thumbnailURL = Constants.imagePrefix+timage.getActualLocation()+".jpg";
 		
@@ -121,11 +121,14 @@ public class SlashAutoSegExpress implements EntryPoint {
 		
 		if(itype.equals(Constants.trainImageType))
 		{
+			Constants.trainImage = timage;
 			trainImageHtml.setHTML(html);
+			
 			
 		}
 		else if(itype.equals(Constants.inputImageType))
 		{
+			Constants.inputImage = timage;
 			inputImageHtml.setHTML(html);
 			
 			minx.setText("0");
@@ -214,6 +217,84 @@ public class SlashAutoSegExpress implements EntryPoint {
 		iimageBtn.setSize("223px", "28px");
 		
 		Button btnRunProcess = new Button("Run process");
+		btnRunProcess.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) 
+			{
+				
+				if(Constants.trainImage == null || Constants.modelInfo == null || Constants.inputImage == null)
+				{
+					MessagePopup mpopup = new MessagePopup("You have to select the training image, the segmentation model and the input image!");
+					mpopup.center();
+					mpopup.show();
+					return;
+				}
+				
+				
+				if(minx.getText().trim().length() ==0 ||  
+				   maxx.getText().trim().length() ==0 ||
+				   miny.getText().trim().length() ==0 ||
+				   maxy.getText().trim().length() ==0 ||
+				   minz.getText().trim().length() ==0 ||
+				   maxz.getText().trim().length() ==0)
+				{
+					MessagePopup mpopup = new MessagePopup("Auto segmentation range cannot be empty!");
+					mpopup.center();
+					mpopup.show();
+					return;
+				}
+				
+				if(modelName.getText().trim().length() == 0)
+				{
+					MessagePopup mpopup = new MessagePopup("Model name cannot be empty!");
+					mpopup.center();
+					mpopup.show();
+					return;
+				}
+				
+				
+				try
+				{
+					CytosegInputs cinput = new CytosegInputs();
+					cinput.setInputDatasetID(Constants.inputImage.getDatasetID());
+					cinput.setTrainingDatasetID(Constants.trainImage.getDatasetID());
+				
+					long xmin = Long.parseLong(minx.getText());
+					cinput.setMinX(xmin);
+					
+					long xmax = Long.parseLong(maxx.getText());
+					cinput.setMaxX(xmax);
+					
+					long ymin = Long.parseLong(miny.getText());
+					cinput.setMinY(ymin);
+					
+					long ymax = Long.parseLong(maxy.getText());
+					cinput.setMaxY(ymax);
+					
+					long zmin = Long.parseLong(minz.getText());
+					cinput.setMinZ(zmin);
+					
+					long zmax = Long.parseLong(maxz.getText());
+					cinput.setMaxZ(zmax);
+					
+					String mname = modelName.getText();
+					mname = mname.trim().replace(" ", "_");
+					cinput.setModelName(modelName.getText());
+					
+					double p_voxel_w = Double.parseDouble(pvoxelWeightBox.getText());
+					cinput.setP_voxel_w(p_voxel_w);
+					
+					
+					
+					
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+				
+			}
+		});
 		root.add(btnRunProcess, 555, 699);
 		btnRunProcess.setSize("165px", "28px");
 		
@@ -349,7 +430,7 @@ public class SlashAutoSegExpress implements EntryPoint {
 		
 		
 		root.add(modelName, 181, 427);
-		modelName.setSize("208px", "16px");
+		modelName.setSize("164px", "16px");
 		
 		VerticalPanel advPanel= new VerticalPanel();
 		

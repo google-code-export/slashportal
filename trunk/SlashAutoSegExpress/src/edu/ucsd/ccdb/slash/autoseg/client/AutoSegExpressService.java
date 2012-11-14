@@ -8,4 +8,5 @@ public interface AutoSegExpressService extends RemoteService
 {
 	Vector<SlashImage> getSlashImages(String userName) throws java.lang.Exception;
 	Vector<DatasetModelInfo> getDatasetModelInfo(long datasetID)throws java.lang.Exception;
+	Long getNexModelID(long datasetID)throws java.lang.Exception;
 }

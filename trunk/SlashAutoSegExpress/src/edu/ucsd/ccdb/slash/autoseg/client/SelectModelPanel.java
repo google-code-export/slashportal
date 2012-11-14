@@ -1,4 +1,5 @@
 package edu.ucsd.ccdb.slash.autoseg.client;
+import java.util.HashMap;
 import java.util.Vector;
 
 import com.google.gwt.user.client.ui.*;
@@ -18,9 +19,10 @@ public class SelectModelPanel  extends PopupPanel
 	ListBox listBox = new ListBox();
 	SelectModelPanel self = this;
 	
+	SlashAutoSegExpress  segExp = null;
 	
-	
-	
+	public long datasetID = -1;
+	public HashMap<String, DatasetModelInfo> modelMap = new HashMap<String,DatasetModelInfo>();
 	
 	private static native JavaScriptObject newWindow(String url, String name, String features)/*-{
     var window = $wnd.open(url, name, features);
@@ -34,9 +36,17 @@ private static native void setWindowTarget(JavaScriptObject window, String targe
 	
 	private void initList()
 	{
+		modelMap.clear();
 		for(int i=0;i<vmodel.size();i++)
 		{
 			DatasetModelInfo info = vmodel.get(i);
+			
+			if(this.datasetID < 0)
+			{
+				this.datasetID = info.getDatasetID();
+			}
+			
+			modelMap.put(info.getModelID()+"", info);
 			
 			if(info.getModelName() == null)
 			{
@@ -51,8 +61,9 @@ private static native void setWindowTarget(JavaScriptObject window, String targe
 	}
 	
 	
-	public SelectModelPanel(Vector<DatasetModelInfo> vModel)
+	public SelectModelPanel(Vector<DatasetModelInfo> vModel, SlashAutoSegExpress sse)
 	{
+		this.segExp = sse;
 		this.vmodel = vModel;
 		this.setWidget(vpanel);
 		vpanel.setSize("665px", "215px");
@@ -80,6 +91,13 @@ private static native void setWindowTarget(JavaScriptObject window, String targe
 				int index = listBox.getSelectedIndex();
 				String val = listBox.getValue(index);
 				System.out.println("-----------Select:"+val);
+				
+				DatasetModelInfo info = modelMap.get(val);
+				if(info != null)
+				{
+					segExp.setTrainingModel(info);
+					self.setVisible(false);
+				}
 				
 			}
 		});
@@ -115,6 +133,11 @@ private static native void setWindowTarget(JavaScriptObject window, String targe
 				int index = listBox.getSelectedIndex();
 				String val = listBox.getValue(index);
 				System.out.println("-----------Select:"+val);
+				
+				DatasetModelInfo info =modelMap.get(val);
+				CreateNewModelPanel cmp = new CreateNewModelPanel(self, info);
+				cmp.show();
+				self.setVisible(false);
 			}
 		});
 		hpanel2.add(btnCreateANew);

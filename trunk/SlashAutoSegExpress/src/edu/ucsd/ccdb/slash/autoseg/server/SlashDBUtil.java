@@ -9,6 +9,26 @@ public class SlashDBUtil
 	SlashDBService db = new SlashDBService();
 	
 	
+	public Long getNexModelID(long datasetID)throws Exception
+	{
+		Long mID = null;
+		String sql  = " select max(version_number)+1 from slash_annotation where dataset_id = ?";
+		Connection c = db.getConnection();
+		PreparedStatement ps = c.prepareStatement(sql);
+		ps.setLong(1, datasetID);
+		ResultSet rs = ps.executeQuery();
+		
+		if(rs.next())
+		{
+			mID = rs.getLong(1);
+		}
+		
+		c.close();
+		
+		return mID;
+	
+		
+	}
 	
 	public Vector<DatasetModelInfo> getDatasetModelInfo(long datasetID)throws Exception
 	{

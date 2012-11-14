@@ -13,7 +13,29 @@ import javax.servlet.http.*;
 public class AutoSegExpressServlet extends RemoteServiceServlet implements AutoSegExpressService
 {
 	SlashDBUtil dbutil = new SlashDBUtil();
+	
+	
+	
 	//private ServletConfig config = null;
+	
+	public Long getNexModelID(long datasetID)throws java.lang.Exception
+	{
+		Long mID = null;
+		
+		try
+		{
+			mID = dbutil.getNexModelID(datasetID);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return mID;
+	}
+	
+	
+	
 	public Vector<DatasetModelInfo> getDatasetModelInfo(long datasetID)throws java.lang.Exception
 	{
 		Vector<DatasetModelInfo> v = new Vector<DatasetModelInfo>();

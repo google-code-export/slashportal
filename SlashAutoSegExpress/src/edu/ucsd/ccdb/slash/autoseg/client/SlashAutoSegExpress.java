@@ -65,24 +65,47 @@ public class SlashAutoSegExpress implements EntryPoint {
 	ListBox serverList = new ListBox();
 	Button timageBtn = new Button("Training Image");
 	SelectImagePanel  tpanel = null;
-	HTML trainImageHtml = new HTML("New HTML", true);
-	HTML inputImageHtml = new HTML("New HTML", true);
+	HTML trainImageHtml = new HTML("...", true);
+	HTML trainingModelHtml = new HTML("...", true);
+	HTML inputImageHtml = new HTML("...", true);
 	int nameMax = 50;
 	Vector<DatasetModelInfo> vmodel = new Vector<DatasetModelInfo>();
 	Button modelBtn = new Button("Training Model");
 	
 	SelectModelPanel smodelPanel = null;
+	
+	
+	TextBox minx = new TextBox();
+	TextBox maxx = new TextBox();
+	TextBox miny = new TextBox();
+	TextBox maxy = new TextBox();
+	TextBox minz = new TextBox();
+	TextBox maxz = new TextBox();
+	TextBox modelName = new TextBox();
+	
 	public void setSlashImages(Vector<SlashImage> imageV)
 	{
 		this.imageV = imageV;
 		System.out.println("Client---------------------------"+imageV);
 	}
 	
+	public void setTrainingModel(DatasetModelInfo info)
+	{
+		Constants.modelInfo = info;
+		String modelText = "";
+		if(info.getModelName() != null && info.getModelName().trim().length() > 0)
+			modelText = "Model: "+info.getModelName()+" ("+info.getDatasetID()+"-"+info.getModelID()+")";
+		else
+			modelText = "Model: "+"("+info.getDatasetID()+"-"+info.getModelID()+")";
+		
+		this.trainingModelHtml.setHTML(modelText);
+	}
+	
 	
 	public void udpateModelInfo(Vector<DatasetModelInfo> vmodel)
 	{
 		this.vmodel = vmodel;
-		 smodelPanel = new SelectModelPanel(this.vmodel);
+		 smodelPanel = new SelectModelPanel(this.vmodel,self);
 		smodelPanel.show();
 	}
 	
@@ -104,6 +127,18 @@ public class SlashAutoSegExpress implements EntryPoint {
 		else if(itype.equals(Constants.inputImageType))
 		{
 			inputImageHtml.setHTML(html);
+			
+			minx.setText("0");
+			maxx.setText(timage.getXmax()+"");
+			
+			miny.setText("0");
+			maxy.setText(timage.getYmax()+"");
+			
+			minz.setText("0");
+			maxz.setText(timage.getZmax()+"");
+			
+			
+			
 		}
 		
 		
@@ -179,11 +214,11 @@ public class SlashAutoSegExpress implements EntryPoint {
 		iimageBtn.setSize("223px", "28px");
 		
 		Button btnRunProcess = new Button("Run process");
-		root.add(btnRunProcess, 499, 471);
+		root.add(btnRunProcess, 555, 699);
 		btnRunProcess.setSize("165px", "28px");
 		
 		VerticalPanel vpanel = new VerticalPanel();
-		root.add(vpanel, 98, 287);
+		root.add(vpanel, 98, 480);
 		vpanel.setSize("557px", "166px");
 
 
@@ -246,11 +281,75 @@ public class SlashAutoSegExpress implements EntryPoint {
 		
 		
 		root.add(trainImageHtml, 419, 43);
-		trainImageHtml.setSize("259px", "18px");
+		trainImageHtml.setSize("301px", "18px");
 		
 		
 		root.add(inputImageHtml, 419, 210);
-		inputImageHtml.setSize("259px", "18px");
+		inputImageHtml.setSize("301px", "18px");
+		
+		
+		root.add(trainingModelHtml, 419, 129);
+		trainingModelHtml.setSize("301px", "18px");
+		
+		HTML htmlAutosegmentationRegion = new HTML("<b>Auto-segmentation range:</b>", true);
+		root.add(htmlAutosegmentationRegion, 98, 281);
+		htmlAutosegmentationRegion.setSize("216px", "18px");
+		
+		HTML htmlXMin = new HTML("X min:", true);
+		root.add(htmlXMin, 98, 305);
+		
+
+		
+		
+		root.add(minx, 138, 305);
+		minx.setSize("63px", "16px");
+		
+		Label lblYMin = new Label("X max:");
+		root.add(lblYMin, 235, 305);
+		
+		
+		root.add(maxx, 279, 305);
+		maxx.setSize("63px", "16px");
+		
+		HTML htmlYMin = new HTML("Y min:", true);
+		root.add(htmlYMin, 98, 344);
+		htmlYMin.setSize("38px", "18px");
+		
+		
+		root.add(miny, 138, 344);
+		miny.setSize("63px", "16px");
+		
+		Label lblYMax = new Label("Y max:");
+		root.add(lblYMax, 235, 344);
+		lblYMax.setSize("42px", "18px");
+		
+		
+		root.add(maxy, 279, 344);
+		maxy.setSize("63px", "16px");
+		
+		HTML htmlZMin = new HTML("Z min:", true);
+		root.add(htmlZMin, 98, 385);
+		htmlZMin.setSize("38px", "18px");
+		
+		
+		root.add(minz, 138, 385);
+		minz.setSize("63px", "16px");
+		
+		Label lblZMax = new Label("Z max:");
+		root.add(lblZMax, 235, 385);
+		lblZMax.setSize("42px", "18px");
+		
+		
+		root.add(maxz, 279, 385);
+		maxz.setSize("63px", "16px");
+		
+		HTML htmlModelName = new HTML("Model name:", true);
+		root.add(htmlModelName, 98, 427);
+		htmlModelName.setSize("81px", "18px");
+		
+		
+		root.add(modelName, 181, 427);
+		modelName.setSize("208px", "16px");
 		
 		VerticalPanel advPanel= new VerticalPanel();
 		

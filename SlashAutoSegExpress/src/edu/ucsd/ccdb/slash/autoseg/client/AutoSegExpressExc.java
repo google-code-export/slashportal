@@ -14,12 +14,64 @@ public class AutoSegExpressExc {
 	//public static String entry = "http://galle.crbs.ucsd.edu:8081/SlashAutoSegExpress/AutoSegExpressServlet";
 	
 	SlashAutoSegExpress segExp = null;
+	CreateNewModelPanel cModelPanel = null;
+	
+	public AutoSegExpressExc(CreateNewModelPanel cnp)
+	{
+		cModelPanel = cnp;
+	}
 	
 	public AutoSegExpressExc(SlashAutoSegExpress sse)
 	{
 		segExp = sse;
 	}
 	
+	
+	public void getNexModelID(long datasetID)throws java.lang.Exception
+	{
+		System.out.println("---------------getNexModelID----------------");
+		 AutoSegExpressServiceAsync galleryService =
+		       (AutoSegExpressServiceAsync)GWT.create(AutoSegExpressService.class);
+		
+		 ServiceDefTarget endpoint = (ServiceDefTarget)galleryService;
+		    endpoint.setServiceEntryPoint( entry);
+		    
+		    
+		    AsyncCallback callback = new AsyncCallback() {
+		          public void onSuccess(Object o) {
+		           System.out.println("Callback: "+o+"!!!!!!!!!!!!!"+o.getClass());
+		           
+			           if(o instanceof Long)
+			           {
+			        	   Long mID = (Long)o;
+			        	   System.out.println("----------------------mID-----------------"+mID);
+			        	   cModelPanel.setModelID(mID);
+			           }
+		           
+
+		          }
+
+		          public void onFailure(Throwable caught) {
+
+
+		            StackTraceElement[] el = caught.getStackTrace();
+
+		            StringBuffer buff = new StringBuffer();
+		            for(int i=0;i<el.length;i++)
+		            {
+		              buff.append("\nService Execute : " +
+		                                 el[i]);
+		            }
+		            System.out.println(buff.toString());
+		            com.google.gwt.user.client.Window.alert("Error: "+caught.toString());
+		            
+		          
+		          }
+		       };
+		       
+		      
+		galleryService.getNexModelID(datasetID, callback);
+	}
 	
 	public void getDatasetModelInfo(long datasetID)throws java.lang.Exception
 	{

@@ -7,6 +7,9 @@ import javax.servlet.http.HttpSession;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import  edu.ucsd.ccdb.slash.autoseg.client.*;
+
+import edu.ucsd.ccdb.slash.autoseg.server.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*; 
 
@@ -17,6 +20,35 @@ public class AutoSegExpressServlet extends RemoteServiceServlet implements AutoS
 	
 	
 	//private ServletConfig config = null;
+	
+	
+	public boolean submitCytoseg(CytosegInputs cinputs)throws java.lang.Exception
+	{
+		System.err.println("-----Server-------------submitCytoseg");
+		SlashClient sclient = new SlashClient();
+		
+		String ipath = dbutil.getIpath(cinputs.getTrainingDatasetID());
+		
+		try
+		{
+			
+			System.out.println("----------------ipath:"+ipath);
+	/*	sclient.submitCytoseg(ipath, cinputs.getTrainingDatasetID(), cinputs.getInputDatasetID(), 
+				cinputs.getUserName(), true+"",cinputs.getMinX(),
+				cinputs.getMaxX(),cinputs.getMinY(), cinputs.getMaxY(),
+				cinputs.getMinZ(), cinputs.getMaxZ(), 
+				cinputs.getP_voxel_w()+","+cinputs.getN_voxel_w(), 
+				cinputs.getP_contour_m()+","+cinputs.getN_contour_m(), 
+				cinputs.getThreshold()+"", cinputs.getModelName(), cinputs.getServerName()); */
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return true;
+		
+	}
 	
 	public Long getNexModelID(long datasetID)throws java.lang.Exception
 	{

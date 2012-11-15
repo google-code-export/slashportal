@@ -8,6 +8,8 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 
 
+
+
 public class AutoSegExpressExc {
 	Vector<SlashImage> imageV=  null;
 	public static String entry = "http://127.0.0.1:8888/AutoSegExpressServlet";
@@ -25,7 +27,53 @@ public class AutoSegExpressExc {
 	{
 		segExp = sse;
 	}
-	
+	public void submitCytoseg(CytosegInputs cinputs)throws java.lang.Exception
+	{
+		AutoSegExpressServiceAsync galleryService =
+		       (AutoSegExpressServiceAsync)GWT.create(AutoSegExpressService.class);
+		 ServiceDefTarget endpoint = (ServiceDefTarget)galleryService;
+		    endpoint.setServiceEntryPoint( entry);
+		    
+		 AsyncCallback callback = new AsyncCallback() {
+	          public void onSuccess(Object o) {
+	           System.out.println("------------------------submitCytoseg: "+o+"!!!!!!!!!!!!!"+o.getClass());
+	           
+	           if(o instanceof Boolean)
+	           {
+	        	   boolean result  = (Boolean)o;
+	        	   System.out.println("submitCytoseg------------"+result);
+	        	
+	           }
+	           else
+	           {
+	        	   System.out.println("submitCytoseg--------------Returned:"+o);
+	           }
+	           
+
+	          }
+
+	          public void onFailure(Throwable caught) {
+
+	        	 
+
+	            StackTraceElement[] el = caught.getStackTrace();
+
+	            StringBuffer buff = new StringBuffer();
+	            for(int i=0;i<el.length;i++)
+	            {
+	              buff.append("\nService Execute : " +
+	                                 el[i]);
+	            }
+	            System.out.println(buff.toString());
+	            com.google.gwt.user.client.Window.alert("Error: "+caught.toString());
+	            
+	          
+	          }
+	       };
+	       
+	       galleryService.submitCytoseg(cinputs, callback);
+		
+	}
 	
 	public void getNexModelID(long datasetID)throws java.lang.Exception
 	{

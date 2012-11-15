@@ -8,6 +8,22 @@ public class SlashDBUtil
 {
 	SlashDBService db = new SlashDBService();
 	
+	public String getIpath(long datasetID) throws Exception
+	{
+		String result = null;
+		String sql = "select resource_path from slash_dataset where dataset_id = ?";
+		Connection c = db.getConnection();
+		PreparedStatement ps = c.prepareStatement(sql);
+		ps.setLong(1, datasetID);
+		ResultSet rs = ps.executeQuery();
+		if(rs.next())
+			result = rs.getString(1);
+		
+		c.close();
+		return result;
+		
+		
+	}
 	
 	public Long getNexModelID(long datasetID)throws Exception
 	{

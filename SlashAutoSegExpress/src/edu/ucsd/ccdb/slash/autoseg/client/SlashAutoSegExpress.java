@@ -70,6 +70,7 @@ public class SlashAutoSegExpress implements EntryPoint {
 	HTML inputImageHtml = new HTML("...", true);
 	int nameMax = 50;
 	Vector<DatasetModelInfo> vmodel = new Vector<DatasetModelInfo>();
+	int traingModelID = 0;
 	Button modelBtn = new Button("Training Model");
 	
 	SelectModelPanel smodelPanel = null;
@@ -282,8 +283,27 @@ public class SlashAutoSegExpress implements EntryPoint {
 					
 					double p_voxel_w = Double.parseDouble(pvoxelWeightBox.getText());
 					cinput.setP_voxel_w(p_voxel_w);
+					double n_voxel_w = Double.parseDouble(nvoxelWeightBox.getText());
+					cinput.setN_voxel_w(n_voxel_w);
+					
+					Integer p_contour_m =  Integer.parseInt(pcontourListWeightBox.getText());
+					cinput.setP_contour_m(p_contour_m);				
+					Integer n_contour_m =  Integer.parseInt(ncontourListWeightBox.getText());
+					cinput.setN_contour_m(n_contour_m);
+					
+					double threshold = Double.parseDouble(contourListThresholdBox.getText());
+					cinput.setThreshold(threshold);
+					int sindex = serverList.getSelectedIndex();
+					String serverName = serverList.getItemText(sindex);
+					cinput.setServerName(serverName);
 					
 					
+					cinput.setTrainModelID(Constants.modelInfo.getModelID());
+					exc.submitCytoseg(cinput);
+					
+					MessagePopup mpp = new MessagePopup("You will receive a notification email about this process.");
+					mpp.center();
+					mpp.show();
 					
 					
 				}

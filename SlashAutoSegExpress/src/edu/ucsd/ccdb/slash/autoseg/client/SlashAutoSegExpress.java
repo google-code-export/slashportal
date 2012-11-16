@@ -1,6 +1,6 @@
 package edu.ucsd.ccdb.slash.autoseg.client;
 
-import java.util.Vector;
+import java.util.*;
 
 import edu.ucsd.ccdb.slash.autoseg.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
@@ -84,6 +84,35 @@ public class SlashAutoSegExpress implements EntryPoint {
 	TextBox maxz = new TextBox();
 	TextBox modelName = new TextBox();
 	
+	private HashMap<String, String> paramMap = new HashMap<String, String>();
+	
+	public static native String getParamString() /*-{
+    return $wnd.location.search;
+}-*/;
+	
+	private void initParamMap(String line)
+	{
+		line = line.substring(1, line.length());
+		
+		String[] items = line.split("&");
+		
+		if(items == null)
+			return ;
+		
+		for(int i=0;i<items.length;i++)
+		{
+			String args = items[i];
+			
+			String[] values = args.split("=");
+			if(values == null || values.length != 2)
+				return;
+			
+			this.paramMap.put(values[0], values[1]);
+			
+		}
+		
+	}
+	
 	public void setSlashImages(Vector<SlashImage> imageV)
 	{
 		this.imageV = imageV;
@@ -151,11 +180,21 @@ public class SlashAutoSegExpress implements EntryPoint {
 	public void onModuleLoad() 
 	{
 	
-
+		String params = this.getParamString();
+		this.initParamMap(params);
+		if(this.paramMap.containsKey("userName"))
+		{
+			String userName = this.paramMap.get("userName");
+			System.out.println("-----------------UserName:"+userName);
+			Constants.userName = userName;
+			
+		}
+		
+		
 		// Add the nameField and sendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
-		RootPanel root =RootPanel.get("sendButtonContainer");
-		
+		RootPanel root =RootPanel.get();//("sendButtonContainer");
+	
 		HTML htmlSelect = new HTML("Select", true);
 		root.add(htmlSelect, 98, 43);
 		
@@ -256,6 +295,8 @@ public class SlashAutoSegExpress implements EntryPoint {
 				try
 				{
 					CytosegInputs cinput = new CytosegInputs();
+					cinput.setUserName(Constants.userName);
+					
 					cinput.setInputDatasetID(Constants.inputImage.getDatasetID());
 					cinput.setTrainingDatasetID(Constants.trainImage.getDatasetID());
 				
@@ -315,7 +356,7 @@ public class SlashAutoSegExpress implements EntryPoint {
 				
 			}
 		});
-		root.add(btnRunProcess, 555, 699);
+		root.add(btnRunProcess, 494, 698);
 		btnRunProcess.setSize("165px", "28px");
 		
 		VerticalPanel vpanel = new VerticalPanel();
@@ -389,7 +430,7 @@ public class SlashAutoSegExpress implements EntryPoint {
 		inputImageHtml.setSize("301px", "18px");
 		
 		
-		root.add(trainingModelHtml, 419, 129);
+		root.add(trainingModelHtml, 419, 139);
 		trainingModelHtml.setSize("301px", "18px");
 		
 		HTML htmlAutosegmentationRegion = new HTML("<b>Auto-segmentation range:</b>", true);

@@ -12,8 +12,8 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 public class AutoSegExpressExc {
 	Vector<SlashImage> imageV=  null;
-	public static String entry = "http://127.0.0.1:8888/AutoSegExpressServlet";
-	//public static String entry = "http://galle.crbs.ucsd.edu:8081/SlashAutoSegExpress/AutoSegExpressServlet";
+	//public static String entry = "http://127.0.0.1:8888/AutoSegExpressServlet";
+	public static String entry = "http://galle.crbs.ucsd.edu:8081/SlashAutoSegExpress/AutoSegExpressServlet";
 	
 	SlashAutoSegExpress segExp = null;
 	CreateNewModelPanel cModelPanel = null;

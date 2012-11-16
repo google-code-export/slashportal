@@ -32,14 +32,22 @@ public class AutoSegExpressServlet extends RemoteServiceServlet implements AutoS
 		try
 		{
 			
+			
+			if(cinputs.getModelName() != null)
+			{
+				String mname = cinputs.getModelName();
+				mname = mname.replace(" ", "_");
+				cinputs.setModelName(mname);
+			}
+			
 			System.out.println("----------------ipath:"+ipath);
-	/*	sclient.submitCytoseg(ipath, cinputs.getTrainingDatasetID(), cinputs.getInputDatasetID(), 
+		sclient.submitCytoseg(ipath, cinputs.getTrainingDatasetID(), cinputs.getInputDatasetID(), 
 				cinputs.getUserName(), true+"",cinputs.getMinX(),
 				cinputs.getMaxX(),cinputs.getMinY(), cinputs.getMaxY(),
 				cinputs.getMinZ(), cinputs.getMaxZ(), 
 				cinputs.getP_voxel_w()+","+cinputs.getN_voxel_w(), 
 				cinputs.getP_contour_m()+","+cinputs.getN_contour_m(), 
-				cinputs.getThreshold()+"", cinputs.getModelName(), cinputs.getServerName()); */
+				cinputs.getThreshold()+"", cinputs.getModelName(), cinputs.getServerName(), cinputs.getTrainModelID()); 
 		}
 		catch(Exception e)
 		{

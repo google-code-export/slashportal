@@ -70,6 +70,7 @@ public class CoryAutoSegGWT implements EntryPoint {
 		new Image(0,0, defaultWidth,defaultHeight,
 		"http://galle.crbs.ucsd.edu/test_image.png");
 	private HashMap<Vector,String> polygonToIDMap = new HashMap<Vector,String>();
+	private HashMap<String, String> paramMap = new HashMap<String, String>();
 	Button drawBtn = new Button("Draw");
 	Button delBtn = new Button("Delete");
 	
@@ -77,9 +78,47 @@ public class CoryAutoSegGWT implements EntryPoint {
 	HTML ylabel = new HTML("Y: 0");
 	
 	CoryAutoSegExc exc=  new CoryAutoSegExc(this);
+	
+	
+	private int gridSize = 100;
+	/**
+	* Gets the string with the parameters from the current URL.
+	*
+	* @return String containing the list of parameters from the URL
+	* in format: ?aaa=bbbb&vvvv=ccc
+	*/
+	public static native String getParamString() /*-{
+	     return $wnd.location.search;
+	}-*/;
+	
+	private void initParamMap(String line)
+	{
+		line = line.substring(1, line.length());
+		
+		String[] items = line.split("&");
+		
+		if(items == null)
+			return ;
+		
+		for(int i=0;i<items.length;i++)
+		{
+			String args = items[i];
+			
+			String[] values = args.split("=");
+			if(values == null || values.length != 2)
+				return;
+			
+			this.paramMap.put(values[0], values[1]);
+			
+		}
+		
+	}
+	
+	
 	public void drawGrid()
 	{
-		int count = this.defaultWidth/100;
+		//int count = this.defaultWidth/100;
+		int count = this.defaultWidth/this.gridSize;
 		int step = 0;
 		for(int i=0; i<count;i++)
 		{
@@ -90,12 +129,14 @@ public class CoryAutoSegGWT implements EntryPoint {
 					, (int)(this.defaultHeight));
 			
 			l1.setStrokeColor("blue");
-			step=step+100;
+			//step=step+100;
+			step=step+this.gridSize;
 			canvas.add(l1);
 		}
 		
 		
-		count = this.defaultHeight/100;
+		//count = this.defaultHeight/100;
+		count = this.defaultHeight/this.gridSize;
 		step = 0;
 		for(int i=0; i<count;i++)
 		{
@@ -106,12 +147,31 @@ public class CoryAutoSegGWT implements EntryPoint {
 					, (int)(step));
 			
 			l1.setStrokeColor("blue");
-			step=step+100;
+			//step=step+100;
+			step=step+this.gridSize;
 			canvas.add(l1);
 		}
 		
 	}
+	
+	private void updateGridSizeFromURL()
+	{
+		String sgridSize = this.paramMap.get("gridSize");
+		try
+		{
+			this.gridSize = Integer.parseInt(sgridSize);
+		}
+		catch(Exception e)
+		{
+			//e.printStackTrace();
+		}
+	}
 	public void onModuleLoad() {
+		
+		this.initParamMap(this.getParamString());
+		this.updateGridSizeFromURL();
+		
+		
 		VerticalPanel mainPanel = new VerticalPanel();
 		mainPanel.setStyleName("mainPanel");
 		
@@ -224,8 +284,22 @@ public class CoryAutoSegGWT implements EntryPoint {
 								diffy = diffy*-1;
 							
 							if(diffy <=2 && diffx <= 2)
+							{
 								canvas.remove(c1);
+								try
+								{
+									boolean deleteOK = vcircle.remove(c1);
+									System.out.println("-----------DeleteOK:"+deleteOK);
+								}
+								catch(Exception e2)
+								{
+									e2.printStackTrace();
+								}
+							}
+
 						}
+						
+
 					}
 				//}
 				

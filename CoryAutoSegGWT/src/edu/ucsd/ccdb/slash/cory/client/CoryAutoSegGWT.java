@@ -78,9 +78,13 @@ public class CoryAutoSegGWT implements EntryPoint {
 	HTML ylabel = new HTML("Y: 0");
 	
 	CoryAutoSegExc exc=  new CoryAutoSegExc(this);
-	
+	String gridLineColor = "blue";
 	
 	private int gridSize = 100;
+	
+	private Vector<Integer> vgridx  = new Vector<Integer>();
+	private Vector<Integer> vgridy = new Vector<Integer>();
+	private int gridRange = 10;
 	/**
 	* Gets the string with the parameters from the current URL.
 	*
@@ -117,6 +121,8 @@ public class CoryAutoSegGWT implements EntryPoint {
 	
 	public void drawGrid()
 	{
+		this.vgridx.clear();
+		this.vgridy.clear();
 		//int count = this.defaultWidth/100;
 		int count = this.defaultWidth/this.gridSize;
 		int step = 0;
@@ -128,8 +134,10 @@ public class CoryAutoSegGWT implements EntryPoint {
 					, (int)(step)
 					, (int)(this.defaultHeight));
 			
-			l1.setStrokeColor("blue");
-			//step=step+100;
+			
+			//l1.setStrokeColor("blue");
+			
+			l1.setStrokeColor(this.gridLineColor);
 			step=step+this.gridSize;
 			canvas.add(l1);
 		}
@@ -146,8 +154,10 @@ public class CoryAutoSegGWT implements EntryPoint {
 					, (int)(this.defaultWidth)
 					, (int)(step));
 			
-			l1.setStrokeColor("blue");
-			//step=step+100;
+			//l1.setStrokeColor("blue");
+			l1.setStrokeColor(this.gridLineColor);
+			
+			
 			step=step+this.gridSize;
 			canvas.add(l1);
 		}
@@ -166,11 +176,92 @@ public class CoryAutoSegGWT implements EntryPoint {
 			//e.printStackTrace();
 		}
 	}
+	
+	private void updateGridLineColor()
+	{
+		String temp = this.paramMap.get("gridLineColor");
+		if(temp != null)
+		{
+			this.gridLineColor = temp;
+		}
+		
+	}
+	
+	private void updateGuideRange()
+	{
+		String guideRange = this.paramMap.get("guideRange");
+		try
+		{
+			if(guideRange != null)
+			{
+				this.gridRange = Integer.parseInt(guideRange);
+				System.out.println("--------------------gridRange:"+this.gridRange);
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private int getClosestGridLine(int position, String axis)
+	{
+		/*int newPosition = 0;
+		int base = position/this.gridSize;
+		newPosition = base*this.gridSize;
+		
+		int leftover = position%this.gridSize;
+		
+		
+		int diff = this.gridSize - leftover;
+		System.out.println("position:"+position+"---Axis:"+axis+"---Base-----------"+base+"----------Leftover--------------"+leftover+"-----diff:"+diff);
+		if(diff < this.gridRange)
+		{
+			
+			newPosition  = newPosition+this.gridSize;
+		}
+		else
+		{
+			newPosition  = newPosition+leftover;
+		}*/
+		int newPosition = position;
+		if(axis.equals("x"))
+		{
+			for(int i=0;i<= this.defaultWidth;i=i+this.gridSize)
+			{
+				int diff = i-position;
+				if(diff < 0)
+					diff=diff*-1;
+				
+				if(diff <= this.gridRange)
+					newPosition = i;
+			}
+		}
+		if(axis.equals("y"))
+		{
+			for(int i=0;i<= this.defaultHeight;i=i+this.gridSize)
+			{
+				int diff = i-position;
+				if(diff < 0)
+					diff=diff*-1;
+				
+				if(diff <= this.gridRange)
+					newPosition = i;
+			}
+		}
+		
+		return newPosition;
+		
+		
+	}
 	public void onModuleLoad() {
 		
 		this.initParamMap(this.getParamString());
 		this.updateGridSizeFromURL();
-		
+		this.updateGridLineColor();
+		this.updateGuideRange();
 		
 		VerticalPanel mainPanel = new VerticalPanel();
 		mainPanel.setStyleName("mainPanel");
@@ -253,7 +344,10 @@ public class CoryAutoSegGWT implements EntryPoint {
 					
 					if(!drawBtn.isEnabled())
 					{
-						Circle c1 = new Circle(event.getX(),event.getY(),4);
+						//Circle c1 = new Circle(event.getX(),event.getY(),4);
+						int x = getClosestGridLine(event.getX(),"x");
+						int y = getClosestGridLine(event.getY(),"y");
+						Circle c1 = new Circle(x,y,4);
 						c1.setFillColor("green");
 						
 						

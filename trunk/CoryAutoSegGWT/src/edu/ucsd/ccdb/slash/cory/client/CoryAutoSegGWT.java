@@ -19,13 +19,17 @@ import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.dom.client.NativeEvent;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ChangeEvent;
 import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -85,6 +89,13 @@ public class CoryAutoSegGWT implements EntryPoint {
 	private Vector<Integer> vgridx  = new Vector<Integer>();
 	private Vector<Integer> vgridy = new Vector<Integer>();
 	private int gridRange = 10;
+	
+	private int gridLineIndex= 1;
+	private Line gline = null;
+	
+	Vector<Line> vgridLine = new Vector<Line>();
+	
+	Button drawAllGridBtn = new Button("Show all grid lines");
 	/**
 	* Gets the string with the parameters from the current URL.
 	*
@@ -118,11 +129,52 @@ public class CoryAutoSegGWT implements EntryPoint {
 		
 	}
 	
+	public void drawNewGridLine()
+	{
+		if(this.gline != null)
+			this.canvas.remove(this.gline);
+		
+		int count = this.defaultHeight/this.gridSize;
+		if(this.gridLineIndex <= count)
+		{
+			int step = this.gridSize*this.gridLineIndex;
+			
+			Line l1 = new Line((int)(0)
+					, (int)(step)
+					, (int)(this.defaultWidth)
+					, (int)(step));
+			
+			
+			l1.setStrokeColor(this.gridLineColor);
+			canvas.add(l1);
+			this.gline = l1;
+		}
+		else
+		{
+			int wcount = this.defaultWidth/this.gridSize;
+		
+			int index = this.gridLineIndex - wcount;
+			int step = this.gridSize*index;
+		
+			
+			Line l1 = new Line((int)(step)
+					, (int)(0)
+					, (int)(step)
+					, (int)(this.defaultHeight));
+			
+			//l1.setStrokeColor("blue");
+			l1.setStrokeColor(this.gridLineColor);
+			canvas.add(l1);
+			this.gline = l1;
+		}
+		
+	}
 	
 	public void drawGrid()
 	{
 		this.vgridx.clear();
 		this.vgridy.clear();
+		this.vgridLine.clear();
 		//int count = this.defaultWidth/100;
 		int count = this.defaultWidth/this.gridSize;
 		int step = 0;
@@ -138,6 +190,7 @@ public class CoryAutoSegGWT implements EntryPoint {
 			//l1.setStrokeColor("blue");
 			
 			l1.setStrokeColor(this.gridLineColor);
+			this.vgridLine.addElement(l1);
 			step=step+this.gridSize;
 			canvas.add(l1);
 		}
@@ -153,7 +206,7 @@ public class CoryAutoSegGWT implements EntryPoint {
 					, (int)(step)
 					, (int)(this.defaultWidth)
 					, (int)(step));
-			
+			this.vgridLine.addElement(l1);
 			//l1.setStrokeColor("blue");
 			l1.setStrokeColor(this.gridLineColor);
 			
@@ -237,6 +290,9 @@ public class CoryAutoSegGWT implements EntryPoint {
 				
 				if(diff <= this.gridRange)
 					newPosition = i;
+				
+				if(newPosition >= this.defaultWidth)
+					newPosition = this.defaultWidth -1;
 			}
 		}
 		if(axis.equals("y"))
@@ -249,6 +305,9 @@ public class CoryAutoSegGWT implements EntryPoint {
 				
 				if(diff <= this.gridRange)
 					newPosition = i;
+				
+				if(newPosition >= this.defaultHeight)
+					newPosition = this.defaultHeight -1;
 			}
 		}
 		
@@ -266,10 +325,29 @@ public class CoryAutoSegGWT implements EntryPoint {
 		VerticalPanel mainPanel = new VerticalPanel();
 		mainPanel.setStyleName("mainPanel");
 		
-		//mainPanel.setVerticalAlignment(mainPanel.ALIGN_MIDDLE);
-		//mainPanel.setHorizontalAlignment(mainPanel.ALIGN_CENTER);
+		SplitLayoutPanel dpanel = new SplitLayoutPanel();
+
+		
+		
+		/*HorizontalPanel hpanel3 = new HorizontalPanel();
+		hpanel3.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
+		HTML lbl = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+		hpanel3.add(lbl);
+		Button leftBtn = new Button("<<");
+		leftBtn.setWidth("100");
+		Button rightBtn = new Button(">>");
+		rightBtn.setWidth("100");
+		hpanel3.add(leftBtn);
+		hpanel3.add(rightBtn);
+		mainPanel.add(hpanel3);*/
+		
 		
 		RootPanel.get("sendButtonContainer").add(mainPanel);
+		
+		
+		//RootPanel.get("sendButtonContainer").add(dpanel);
+		//RootLayoutPanel.get().add(dpanel);
+	
 		RootPanel.get("sendButtonContainer").setStyleName("sendButtonContainer");
 		
 		
@@ -514,6 +592,91 @@ public class CoryAutoSegGWT implements EntryPoint {
 		});
 		hpanel2.add(showXMLBtn);
 		
+		HTML space5 = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");	
+		hpanel2.add(space5);
+		Button leftGridBtn = new Button("<<");
+		leftGridBtn.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) 
+			{
+				if(gridLineIndex-1 >= 0)
+					gridLineIndex = gridLineIndex-1;
+				drawNewGridLine();
+			}
+		});
+		hpanel2.add(leftGridBtn);
+		
+		HTML space6 = new HTML("&nbsp;&nbsp;");	
+		hpanel2.add(space6);
+		Button rightGridBtn = new Button(">>");
+		rightGridBtn.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				int wcount = defaultWidth/gridSize;
+				int hcount = defaultHeight/gridSize;
+				int count = wcount+hcount;
+				if(gridLineIndex+1<= count)
+				{
+					System.out.println("-------------------gridLineIndex+1<= count");
+					gridLineIndex++;
+					drawNewGridLine();
+				}
+				else
+				{
+					System.out.println("-------------------gridLineIndex+1<= count: FALSE+: GridIndex"+gridLineIndex);
+					
+					gridLineIndex = 0;
+					drawNewGridLine();
+				}
+			}
+		});
+		hpanel2.add(rightGridBtn);
+		
+		
+		HTML space7 = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");	
+		hpanel2.add(space7);
+		Button undoBtn = new Button("Undo");
+		undoBtn.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				
+				if(vcircle.size() > 0)
+				{
+					Circle c = vcircle.lastElement();
+					vcircle.remove(c);
+					canvas.remove(c);
+				}
+				
+			}
+		});
+		hpanel2.add(undoBtn);
+		
+		
+		HTML space8 = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+		hpanel2.add(space8);
+		
+		drawAllGridBtn.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				
+					if(drawAllGridBtn.getText().equals("Show all grid lines"))
+					{
+						drawGrid();
+						drawAllGridBtn.setText("Hide all grid lines");
+					}
+					else
+					{
+						
+						for(int i=0;i< vgridLine.size();i++)	
+						{
+							Line l1 = vgridLine.get(i);
+							canvas.remove(l1);
+							
+						}
+						drawAllGridBtn.setText("Show all grid lines");
+					}
+				
+			}
+		});
+		hpanel2.add( drawAllGridBtn);
+		
+		
 		//Button undoBtn = new Button("Undo");
 		//hpanel2.add(undoBtn);
 		
@@ -532,8 +695,9 @@ public class CoryAutoSegGWT implements EntryPoint {
 
 		
 	
-		this.drawGrid();
-		
+		//this.drawGrid();
+		this.drawNewGridLine();
+		System.out.println("-----------------Finish onModuleLoad");
 
 	}
 	

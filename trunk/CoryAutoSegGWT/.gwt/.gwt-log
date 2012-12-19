@@ -710,3 +710,710 @@ Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
          Generating method body for defCurrencyCode()
    Adding '3' new generated units
       Removing invalidated units
+Module location: file:/E:/google/android/android-sdk-windows-1.0_r1/samples/Snake/CoryAutoSegGWT/src/edu/ucsd/ccdb/slash/cory/CoryAutoSegGWT.gwt.xml
+Loading inherited module 'com.google.gwt.user.User'
+   Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/User.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/Core.gwt.xml
+      Loading inherited module 'com.google.gwt.dev.jjs.intrinsic.Intrinsic'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-dev-windows.jar!/com/google/gwt/dev/jjs/intrinsic/Intrinsic.gwt.xml
+         Loading inherited module 'com.google.gwt.lang.LongLib'
+            Module location: jar:file:C:\Users\wawong\Desktop\eclipse\plugins\com.instantiations.designer.gwt.hosted.2_0.super_8.1.0.r34x201010220326.jar!/com/google/gwt/lang/LongLib.gwt.xml
+      Loading inherited module 'com.google.gwt.emul.Emulation'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/emul/Emulation.gwt.xml
+         Loading inherited module 'com.google.gwt.logging.LogImpl'
+            Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/logging/LogImpl.gwt.xml
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/xhr/XMLHttpRequest.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.CompilerParameters'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/CompilerParameters.gwt.xml
+      Loading inherited module 'com.google.gwt.core.EmulateJsStack'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/EmulateJsStack.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.AsyncFragmentLoader'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/AsyncFragmentLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.core.XSLinker'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/XSLinker.gwt.xml
+      Loading inherited module 'com.google.gwt.core.CrossSiteIframeLinker'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/CrossSiteIframeLinker.gwt.xml
+   Loading inherited module 'com.google.gwt.text.Text'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/text/Text.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.event.Event'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/event/Event.gwt.xml
+      Loading inherited module 'com.google.gwt.event.EventBase'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/event/EventBase.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.dom.DomEvent'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/event/dom/DomEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/dom/DOM.gwt.xml
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.UserAgent'
+               Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/UserAgent.gwt.xml
+               Loading inherited module 'com.google.gwt.emul.EmulationWithUserAgent'
+                  Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/emul/EmulationWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.emul.Emulation'
+                     Module 'com.google.gwt.emul.Emulation' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.core.CoreWithUserAgent'
+                  Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/core/CoreWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.core.Core'
+                     Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.logical.LogicalEvent'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/event/logical/LogicalEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.animation.Animation'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/animation/Animation.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.editor.Editor'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/editor/Editor.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.resources.Resources'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/resources/Resources.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/http/HTTP.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+            Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.layout.Layout'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/layout/Layout.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.animation.Animation'
+         Module 'com.google.gwt.animation.Animation' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.uibinder.UiBinder'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/uibinder/UiBinder.gwt.xml
+      Loading inherited module 'com.google.gwt.resources.Resources'
+         Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.AsyncProxy'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/AsyncProxy.gwt.xml
+   Loading inherited module 'com.google.gwt.user.RemoteService'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/RemoteService.gwt.xml
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DocumentRoot'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/DocumentRoot.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DOM'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/DOM.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Window.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.HTTPRequest'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/HTTPRequest.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.History'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/History.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.i18n.I18N'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/i18n/I18N.gwt.xml
+      Loading inherited module 'com.google.gwt.regexp.RegExp'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/regexp/RegExp.gwt.xml
+      Loading inherited module 'com.google.gwt.safehtml.SafeHtml'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/safehtml/SafeHtml.gwt.xml
+         Loading inherited module 'com.google.gwt.regexp.RegExp'
+            Module 'com.google.gwt.regexp.RegExp' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Popup'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Popup.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Form'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Form.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.TextBox'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/TextBox.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Focus'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Focus.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ImageBundle'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/ImageBundle.gwt.xml
+      Loading inherited module 'com.google.gwt.user.ClippedImage'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/ClippedImage.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ClippedImage'
+      Module 'com.google.gwt.user.ClippedImage' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.RichText'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/RichText.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.SplitPanel'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/SplitPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.CaptionPanel'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/CaptionPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module 'com.google.gwt.user.Window' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Tree'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Tree.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Hyperlink'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/Hyperlink.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.FileUpload'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/FileUpload.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.datepicker.DatePicker'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/datepicker/DatePicker.gwt.xml
+   Loading inherited module 'com.google.gwt.user.cellview.CellView'
+      Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/cellview/CellView.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.cell.Cell'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/cell/Cell.gwt.xml
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.safehtml.SafeHtml'
+            Module 'com.google.gwt.safehtml.SafeHtml' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.text.Text'
+            Module 'com.google.gwt.text.Text' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.view.View'
+         Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/view/View.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.safehtml.SafeHtml'
+      Module 'com.google.gwt.safehtml.SafeHtml' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.user.theme.standard.Standard'
+   Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/theme/standard/Standard.gwt.xml
+Loading inherited module 'org.vaadin.gwtgraphics.GWTGraphics'
+   Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-graphics-1.0.0.jar!/org/vaadin/gwtgraphics/GWTGraphics.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.UserAgent'
+      Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.widgetideas.WidgetIdeas'
+   Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/WidgetIdeas.gwt.xml
+   Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/BasicWidget.gwt.xml
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/WidgetBase.gwt.xml
+         Loading inherited module 'com.google.gwt.libideas.LibIdeas'
+            Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/LibIdeas.gwt.xml
+            Loading inherited module 'com.google.gwt.libideas.ImmutableResources'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/ImmutableResources.gwt.xml
+               Loading inherited module 'com.google.gwt.core.Core'
+                  Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.libideas.BasicLib'
+                  Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/BasicLib.gwt.xml
+               Loading inherited module 'com.google.gwt.http.HTTP'
+                  Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.libideas.Logging'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/Logging.gwt.xml
+               Loading inherited module 'com.google.gwt.core.Core'
+                  Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.libideas.BasicLib'
+                  Module 'com.google.gwt.libideas.BasicLib' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+                  Module 'com.google.gwt.widgetideas.BasicWidget' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.libideas.Validation'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/Validation.gwt.xml
+               Loading inherited module 'com.google.gwt.core.Core'
+                  Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.libideas.Event'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/libideas/Event.gwt.xml
+               Loading inherited module 'com.google.gwt.user.User'
+                  Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.i18n.I18N'
+            Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.BasicTable'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/BasicTable.gwt.xml
+      Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+         Module 'com.google.gwt.widgetideas.BasicWidget' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.ScrollTable'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/ScrollTable.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module 'com.google.gwt.widgetideas.WidgetBase' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.table.OverrideDOM'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/table/OverrideDOM.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.table.FixedWidthGrid'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/table/FixedWidthGrid.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+            Module 'com.google.gwt.widgetideas.BasicWidget' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.widgetideas.table.OverrideDOM'
+            Module 'com.google.gwt.widgetideas.table.OverrideDOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.table.FixedWidthFlexTable'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/table/FixedWidthFlexTable.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+            Module 'com.google.gwt.widgetideas.BasicWidget' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.widgetideas.table.OverrideDOM'
+            Module 'com.google.gwt.widgetideas.table.OverrideDOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.BasicTable'
+         Module 'com.google.gwt.widgetideas.BasicTable' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.GlassPanel'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/GlassPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module 'com.google.gwt.widgetideas.WidgetBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.HyperlinkOverride'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/HyperlinkOverride.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module 'com.google.gwt.widgetideas.WidgetBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.DatePicker'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/DatePicker.gwt.xml
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module 'com.google.gwt.widgetideas.WidgetBase' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.widgetideas.BasicTable'
+         Module 'com.google.gwt.widgetideas.BasicTable' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.widgetideas.GWTCanvas'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/widgetideas/GWTCanvas.gwt.xml
+      Loading inherited module 'com.google.gwt.widgetideas.WidgetBase'
+         Module 'com.google.gwt.widgetideas.WidgetBase' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.libideas.LibIdeas'
+   Module 'com.google.gwt.libideas.LibIdeas' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.gen2.picker.Picker'
+   Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/picker/Picker.gwt.xml
+   Loading inherited module 'com.google.gwt.gen2.widgetbase.WidgetBase'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/widgetbase/WidgetBase.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.gen2.base.Base'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/base/Base.gwt.xml
+      Loading inherited module 'com.google.gwt.gen2.event.Event'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/event/Event.gwt.xml
+         Loading inherited module 'com.google.gwt.gen2.base.Base'
+            Module 'com.google.gwt.gen2.base.Base' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.gen2.logging.Logging'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/logging/Logging.gwt.xml
+         Loading inherited module 'com.google.gwt.gen2.logging.handler.LogHandler'
+            Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/logging/handler/LogHandler.gwt.xml
+            Loading inherited module 'com.google.gwt.user.User'
+               Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.gen2.commonwidget.CommonWidget'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/commonwidget/CommonWidget.gwt.xml
+               Loading inherited module 'com.google.gwt.gen2.widgetbase.WidgetBase'
+                  Module 'com.google.gwt.gen2.widgetbase.WidgetBase' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.gen2.table.override.Override'
+                  Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/table/override/Override.gwt.xml
+                  Loading inherited module 'com.google.gwt.core.Core'
+                     Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+                  Loading inherited module 'com.google.gwt.user.UserAgent'
+                     Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+                  Loading inherited module 'com.google.gwt.gen2.table.override.OverrideDOM'
+                     Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/table/override/OverrideDOM.gwt.xml
+                     Loading inherited module 'com.google.gwt.core.Core'
+                        Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+                     Loading inherited module 'com.google.gwt.user.UserAgent'
+                        Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.gen2.commonevent.CommonEvent'
+                  Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/commonevent/CommonEvent.gwt.xml
+                  Loading inherited module 'com.google.gwt.gen2.base.Base'
+                     Module 'com.google.gwt.gen2.base.Base' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.gen2.logging.CoreLogging'
+            Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/logging/CoreLogging.gwt.xml
+            Loading inherited module 'com.google.gwt.gen2.base.Base'
+               Module 'com.google.gwt.gen2.base.Base' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.event.EventBase'
+               Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.User'
+               Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.gen2.logging.LoggingBase'
+               Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/logging/LoggingBase.gwt.xml
+               Loading inherited module 'com.google.gwt.gen2.base.Base'
+                  Module 'com.google.gwt.gen2.base.Base' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.event.EventBase'
+                  Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.libideas.ImmutableResources'
+         Module 'com.google.gwt.libideas.ImmutableResources' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.gen2.widgetbase._Resources'
+         Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/widgetbase/_Resources.gwt.xml
+         Loading inherited module 'com.google.gwt.user.theme.standard.StandardResources'
+            Module location: jar:file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar!/com/google/gwt/user/theme/standard/StandardResources.gwt.xml
+   Loading inherited module 'com.google.gwt.widgetideas.BasicWidget'
+      Module 'com.google.gwt.widgetideas.BasicWidget' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.gen2.selection.Selection'
+      Module location: jar:file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar!/com/google/gwt/gen2/selection/Selection.gwt.xml
+      Loading inherited module 'com.google.gwt.gen2.commonwidget.CommonWidget'
+         Module 'com.google.gwt.gen2.commonwidget.CommonWidget' has already been loaded and will be skipped
+Public resources found in...
+   Refreshing resources
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/rt.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\rt.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/jsse.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\jsse.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/jce.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\jce.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/charsets.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\charsets.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/dnsns.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\dnsns.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/localedata.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\localedata.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/sunjce_provider.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\sunjce_provider.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/sunpkcs11.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\sunpkcs11.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/appengine-local-runtime-shared.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\appengine-local-runtime-shared.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-el_1.0_spec-1.0.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-el_1.0_spec-1.0.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-jsp_2.1_spec-1.0.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-jsp_2.1_spec-1.0.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-servlet_2.5_spec-1.2.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-servlet_2.5_spec-1.2.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/ant-1.6.5.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\ant-1.6.5.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/ant-launcher-1.6.5.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\ant-launcher-1.6.5.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/commons-el-1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\commons-el-1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/commons-logging-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\commons-logging-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/jasper-compiler-5.0.28.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\jasper-compiler-5.0.28.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/jasper-runtime-5.0.28.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\jasper-runtime-5.0.28.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/appengine-api-1.0-sdk-1.2.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\appengine-api-1.0-sdk-1.2.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-appengine-1.0.0.final.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-appengine-1.0.0.final.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-core-1.1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-core-1.1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-jpa-1.1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-jpa-1.1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/geronimo-jpa_3.0_spec-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\geronimo-jpa_3.0_spec-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/geronimo-jta_1.1_spec-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\geronimo-jta_1.1_spec-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/jdo2-api-2.3-SNAPSHOT.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\jdo2-api-2.3-SNAPSHOT.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/appengine-tools-api.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\appengine-tools-api.jar
+      Searching for resources within file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar
+         Indexing zip file: E:\softwareBackup\gwt-2.1.0\gwt-2.1.0\gwt-user.jar
+      Searching for resources within file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-dev-windows.jar
+         Indexing zip file: E:\softwareBackup\gwt-2.1.0\gwt-2.1.0\gwt-dev-windows.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/appengine-api-1.0-sdk-1.2.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\appengine-api-1.0-sdk-1.2.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-appengine-1.0.0.final.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-appengine-1.0.0.final.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-core-1.1.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-core-1.1.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-jpa-1.1.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-jpa-1.1.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\geronimo-jpa_3.0_spec-1.1.1.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\geronimo-jta_1.1_spec-1.1.1.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-graphics-1.0.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-graphics-1.0.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-incubator-20101117-r1766.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-servlet.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-servlet.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/jdo2-api-2.3-SNAPSHOT.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\jdo2-api-2.3-SNAPSHOT.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/postgresql-8.3-603.jdbc3.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\postgresql-8.3-603.jdbc3.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/build/jdom.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\build\jdom.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/ant.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\ant.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/jaxen.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\jaxen.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/saxpath.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\saxpath.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xalan.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xalan.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xerces.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xerces.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xml-apis.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xml-apis.jar
+Translatable source found in...
+   Refreshing resources
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/rt.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\rt.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/jsse.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\jsse.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/jce.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\jce.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/charsets.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\charsets.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/dnsns.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\dnsns.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/localedata.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\localedata.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/sunjce_provider.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\sunjce_provider.jar
+      Searching for resources within file:/C:/Program%20Files%20(x86)/Java/jre1.5.0_22/lib/ext/sunpkcs11.jar
+         Indexing zip file: C:\Program Files (x86)\Java\jre1.5.0_22\lib\ext\sunpkcs11.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/appengine-local-runtime-shared.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\appengine-local-runtime-shared.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-el_1.0_spec-1.0.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-el_1.0_spec-1.0.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-jsp_2.1_spec-1.0.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-jsp_2.1_spec-1.0.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/geronimo-servlet_2.5_spec-1.2.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\geronimo-servlet_2.5_spec-1.2.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/ant-1.6.5.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\ant-1.6.5.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/ant-launcher-1.6.5.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\ant-launcher-1.6.5.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/commons-el-1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\commons-el-1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/commons-logging-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\commons-logging-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/jasper-compiler-5.0.28.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\jasper-compiler-5.0.28.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/shared/jsp/jasper-runtime-5.0.28.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\shared\jsp\jasper-runtime-5.0.28.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/appengine-api-1.0-sdk-1.2.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\appengine-api-1.0-sdk-1.2.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-appengine-1.0.0.final.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-appengine-1.0.0.final.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-core-1.1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-core-1.1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/datanucleus-jpa-1.1.0.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\datanucleus-jpa-1.1.0.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/geronimo-jpa_3.0_spec-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\geronimo-jpa_3.0_spec-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/geronimo-jta_1.1_spec-1.1.1.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\geronimo-jta_1.1_spec-1.1.1.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/user/orm/jdo2-api-2.3-SNAPSHOT.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\user\orm\jdo2-api-2.3-SNAPSHOT.jar
+      Searching for resources within file:/C:/Users/wawong/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334/appengine-java-sdk-1.2.0/lib/appengine-tools-api.jar
+         Indexing zip file: C:\Users\wawong\Desktop\eclipse\plugins\com.google.appengine.eclipse.sdkbundle_1.2.0.v200904062334\appengine-java-sdk-1.2.0\lib\appengine-tools-api.jar
+      Searching for resources within file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-user.jar
+         Indexing zip file: E:\softwareBackup\gwt-2.1.0\gwt-2.1.0\gwt-user.jar
+      Searching for resources within file:/E:/softwareBackup/gwt-2.1.0/gwt-2.1.0/gwt-dev-windows.jar
+         Indexing zip file: E:\softwareBackup\gwt-2.1.0\gwt-2.1.0\gwt-dev-windows.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/appengine-api-1.0-sdk-1.2.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\appengine-api-1.0-sdk-1.2.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-appengine-1.0.0.final.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-appengine-1.0.0.final.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-core-1.1.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-core-1.1.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/datanucleus-jpa-1.1.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\datanucleus-jpa-1.1.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\geronimo-jpa_3.0_spec-1.1.1.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\geronimo-jta_1.1_spec-1.1.1.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-graphics-1.0.0.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-graphics-1.0.0.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-incubator-20101117-r1766.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-incubator-20101117-r1766.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/gwt-servlet.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\gwt-servlet.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/jdo2-api-2.3-SNAPSHOT.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\jdo2-api-2.3-SNAPSHOT.jar
+      Searching for resources within file:/E:/Canvas_GWT_Test2/Canvas_GWT_Test2/war/WEB-INF/lib/postgresql-8.3-603.jdbc3.jar
+         Indexing zip file: E:\Canvas_GWT_Test2\Canvas_GWT_Test2\war\WEB-INF\lib\postgresql-8.3-603.jdbc3.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/build/jdom.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\build\jdom.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/ant.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\ant.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/jaxen.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\jaxen.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/saxpath.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\saxpath.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xalan.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xalan.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xerces.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xerces.jar
+      Searching for resources within file:/C:/JAVA_LIB/jdom/jdom/lib/xml-apis.jar
+         Indexing zip file: C:\JAVA_LIB\jdom\jdom\lib\xml-apis.jar
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.widgetideas.client.SliderBar.SliderBarImages
+   Invoking generator com.google.gwt.user.rebind.ui.ImageBundleGenerator
+      Adding image 'com/google/gwt/widgetideas/client/slider.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderDisabled.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderSliding.gif'
+      Writing generated resource 'E:\google\android\android-sdk-windows-1.0_r1\samples\Snake\CoryAutoSegGWT\.gwt\.tmp\shell\edu.ucsd.ccdb.slash.cory.CoryAutoSegGWT\8B5C3A0D9A73F6725A5918C7909AC476.cache.png'
+   Adding '1' new generated units
+      Removing invalidated units
+Refreshing module 'coryautoseggwt'
+   Refreshing resources
+   Refreshing resources
+   Refreshing resources
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.widgetideas.client.SliderBar.SliderBarImages
+   Invoking generator com.google.gwt.user.rebind.ui.ImageBundleGenerator
+      Adding image 'com/google/gwt/widgetideas/client/slider.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderDisabled.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderSliding.gif'
+      Writing generated resource 'E:\google\android\android-sdk-windows-1.0_r1\samples\Snake\CoryAutoSegGWT\.gwt\.tmp\shell\edu.ucsd.ccdb.slash.cory.CoryAutoSegGWT\8B5C3A0D9A73F6725A5918C7909AC476.cache.png'
+   Adding '1' new generated units
+      Removing invalidated units
+Refreshing module 'coryautoseggwt'
+   Refreshing resources
+   Refreshing resources
+   Refreshing resources
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.widgetideas.client.SliderBar.SliderBarImages
+   Invoking generator com.google.gwt.user.rebind.ui.ImageBundleGenerator
+      Adding image 'com/google/gwt/widgetideas/client/slider.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderDisabled.gif'
+      Adding image 'com/google/gwt/widgetideas/client/sliderSliding.gif'
+      Writing generated resource 'E:\google\android\android-sdk-windows-1.0_r1\samples\Snake\CoryAutoSegGWT\.gwt\.tmp\shell\edu.ucsd.ccdb.slash.cory.CoryAutoSegGWT\8B5C3A0D9A73F6725A5918C7909AC476.cache.png'
+   Adding '1' new generated units
+      Removing invalidated units

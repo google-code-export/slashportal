@@ -16,6 +16,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.user.client.Event.NativePreviewEvent;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
@@ -38,6 +39,7 @@ import com.google.gwt.event.dom.client.MouseMoveEvent;
 import com.google.gwt.event.dom.client.MouseMoveHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DisclosurePanel;
@@ -240,24 +242,7 @@ public class CoryAutoSegGWT implements EntryPoint {
 		
 	}
 	
-	private void updateGuideRange()
-	{
-		String guideRange = this.paramMap.get("guideRange");
-		try
-		{
-			if(guideRange != null)
-			{
-				this.gridRange = Integer.parseInt(guideRange);
-				System.out.println("--------------------gridRange:"+this.gridRange);
-			}
-			
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		
-	}
+
 	
 	private int getClosestGridLine(int position, String axis)
 	{
@@ -315,12 +300,146 @@ public class CoryAutoSegGWT implements EntryPoint {
 		
 		
 	}
+	
+	private void updateGuideRange()
+	{
+		String guideRange = this.paramMap.get("guideRange");
+		try
+		{
+			if(guideRange != null)
+			{
+				this.gridRange = Integer.parseInt(guideRange);
+				System.out.println("--------------------gridRange:"+this.gridRange);
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	private void updateImageURL()
+	{
+		String imageURL = this.paramMap.get("imageURL");
+		String swidth = this.paramMap.get("imageWidth");
+		String sheight = this.paramMap.get("imageHeight");
+		
+	
+		
+		int iwidth = this.defaultWidth; 
+		int iheight = this.defaultHeight; 
+		
+		if(swidth != null && sheight != null)
+		{
+			try
+			{
+				iwidth =  Integer.parseInt(swidth);
+				iheight = Integer.parseInt(sheight);
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				iwidth = this.defaultWidth; Integer.parseInt(swidth);
+				iheight = this.defaultHeight; Integer.parseInt(sheight);
+			}
+			
+		}
+		
+		try
+		{
+
+			
+			
+			
+			if(imageURL != null)
+			{
+				image.setWidth(iwidth);
+				image.setHeight(iheight);
+				image.setHref(imageURL);
+				
+				this.defaultWidth = iwidth;
+				this.defaultHeight = iheight;
+				
+				System.out.println("--------------------imageURL:"+image.getHref());
+			}
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
 	public void onModuleLoad() {
 		
 		this.initParamMap(this.getParamString());
+		this.updateImageURL();
 		this.updateGridSizeFromURL();
 		this.updateGridLineColor();
 		this.updateGuideRange();
+		
+		
+		
+		Event.addNativePreviewHandler(new Event.NativePreviewHandler() {
+			public void onPreviewNativeEvent(NativePreviewEvent event) {
+				
+			
+				NativeEvent ne = event.getNativeEvent();
+				//System.out.println("Char code:"+ne.getKeyCode());
+				final int z = 90;
+				final int leftArrow = 37;
+				final int rightArrow = 39;
+				final int upArrow = 38;
+				final int downArrow = 40;
+			
+				
+				if(ne.getKeyCode() == z && ne.getType().equals("keydown") && ne.getCtrlKey())
+				{
+		
+					if(vcircle.size() > 0)
+					{
+						Circle c = vcircle.lastElement();
+						vcircle.remove(c);
+						canvas.remove(c);
+					}
+					
+				}
+				
+				if((ne.getKeyCode() == rightArrow || ne.getKeyCode() == downArrow) && ne.getType().equals("keydown"))
+				{
+					int wcount = defaultWidth/gridSize;
+					int hcount = defaultHeight/gridSize;
+					int count = wcount+hcount;
+					if(gridLineIndex+1<= count)
+					{
+						System.out.println("-------------------gridLineIndex+1<= count");
+						gridLineIndex++;
+						drawNewGridLine();
+					}
+					else
+					{
+						System.out.println("-------------------gridLineIndex+1<= count: FALSE+: GridIndex"+gridLineIndex);
+						
+						gridLineIndex = 0;
+						drawNewGridLine();
+					}
+					
+				}
+				
+				if((ne.getKeyCode() == leftArrow || ne.getKeyCode() == upArrow) && ne.getType().equals("keydown"))
+				{
+					if(gridLineIndex-1 >= 0)
+						gridLineIndex = gridLineIndex-1;
+					drawNewGridLine();
+					
+				}
+				
+				
+				
+			}
+		});
+		
 		
 		VerticalPanel mainPanel = new VerticalPanel();
 		mainPanel.setStyleName("mainPanel");
@@ -329,17 +448,47 @@ public class CoryAutoSegGWT implements EntryPoint {
 
 		
 		
-		/*HorizontalPanel hpanel3 = new HorizontalPanel();
+		HorizontalPanel hpanel3 = new HorizontalPanel();
 		hpanel3.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		HTML lbl = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 		hpanel3.add(lbl);
-		Button leftBtn = new Button("<<");
-		leftBtn.setWidth("100");
-		Button rightBtn = new Button(">>");
-		rightBtn.setWidth("100");
-		hpanel3.add(leftBtn);
-		hpanel3.add(rightBtn);
-		mainPanel.add(hpanel3);*/
+		Button leftBtn2 = new Button("<<");
+		leftBtn2.setWidth("100");
+		leftBtn2.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) 
+			{
+				if(gridLineIndex-1 >= 0)
+					gridLineIndex = gridLineIndex-1;
+				drawNewGridLine();
+			}
+		});
+		Button rightBtn2 = new Button(">>");
+		rightBtn2.setWidth("100");
+		rightBtn2.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				int wcount = defaultWidth/gridSize;
+				int hcount = defaultHeight/gridSize;
+				int count = wcount+hcount;
+				if(gridLineIndex+1<= count)
+				{
+					System.out.println("-------------------gridLineIndex+1<= count");
+					gridLineIndex++;
+					drawNewGridLine();
+				}
+				else
+				{
+					System.out.println("-------------------gridLineIndex+1<= count: FALSE+: GridIndex"+gridLineIndex);
+					
+					gridLineIndex = 0;
+					drawNewGridLine();
+				}
+			}
+		});
+		HTML space0 = new HTML("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+		hpanel3.add(leftBtn2);
+		hpanel3.add(space0);
+		hpanel3.add(rightBtn2);
+		mainPanel.add(hpanel3);
 		
 		
 		RootPanel.get("sendButtonContainer").add(mainPanel);
@@ -363,7 +512,8 @@ public class CoryAutoSegGWT implements EntryPoint {
 		slider.setStepSize(1);
 		//slider.setStyleName("slider");
 
-		canvas = new DrawingArea(700, 700);
+		//canvas = new DrawingArea(700, 700);
+		canvas = new DrawingArea(this.defaultWidth, this.defaultHeight);
 		
 		canvas.addMouseUpHandler(new MouseUpHandler() {
 			public void onMouseUp(MouseUpEvent event) 
@@ -687,7 +837,7 @@ public class CoryAutoSegGWT implements EntryPoint {
 	
 		slider.setSize("650px", "20px");
 		slider.setNumTicks(1);
-		canvas.setSize("700px", "700px");
+		//canvas.setSize("700px", "700px");
 		
 		
 		canvas.add(image); 

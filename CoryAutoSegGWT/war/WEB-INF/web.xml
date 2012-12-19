@@ -8,7 +8,7 @@
   <!-- Servlets -->
       <context-param>
         <param-name>configFile</param-name>
-        <!--  <param-value>E:\\slash-db-config.properties</param-value>-->
+       <!--   <param-value>E:\\slash-db-config.properties</param-value>-->
         <param-value>/var/home/wawong/slash-db-config.properties</param-value>
     </context-param>
   <!-- Servlets -->

@@ -1,0 +1,1 @@
+SET CATALINA_HOME=C:\tomcats\liferay-portal-5.2.3\tomcat-6.0.18

@@ -1,0 +1,1 @@
+del C:\tomcats\liferay-portal-5.2.3\tomcat-6.0.18\webapps\slash_results-portlet\*.jsp

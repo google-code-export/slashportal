@@ -49,7 +49,9 @@ public class SlashDBUtil
 	public Vector<DatasetModelInfo> getDatasetModelInfo(long datasetID)throws Exception
 	{
 		Vector<DatasetModelInfo> v = new Vector<DatasetModelInfo>();
-		String sql = " select distinct version_number, count(annotation_id), version_nickname from slash_annotation where dataset_id = "+datasetID+" group by version_number,version_nickname";
+		//String sql = " select distinct version_number, count(annotation_id), version_nickname from slash_annotation where dataset_id = "+datasetID+" group by version_number,version_nickname";
+		String sql = "select distinct version_number, count, version_nickname from slash_model_count_cache where dataset_id = "+datasetID;
+		
 		Connection c = db.getConnection();
 		PreparedStatement ps = c.prepareStatement(sql);
 		//ps.setLong(1, datasetID);
@@ -244,10 +246,10 @@ public class SlashDBUtil
 		
 		
 		String sql =  "(select distinct i.image_id,  i.ipath,  i.attribution,  i.contact,  i.description,  i.email,  i.license,  i.portal_user,  i.modified_time,  i.actual_location,  i.wib_url ,  i.x_max,  i.y_max,  i.z_max, ds.dataset_id "+
-		"\n from  slash_image_box i, slash_dataset ds where deleted= false and portal_user = ?  and ds.resource_path = 'file:'|| i.actual_location) "+
+		"\n from  slash_image_box i, slash_dataset ds where deleted= false and (portal_user = ? or is_public = true) and ds.resource_path = 'file:'|| i.actual_location) "+
 		"\n union "+
 		"\n (select distinct i.image_id,  i.ipath,  i.attribution,  i.contact,  i.description,  i.email,  i.license,  i.portal_user,  i.modified_time,  i.actual_location,  i.wib_url ,  i.x_max,  i.y_max,  i.z_max, ds.dataset_id "+
-		"\n from  slash_image_box i, slash_dataset ds where deleted= false and portal_user = ?  and ds.resource_path = 'file:'|| i.actual_location || '.ppm' )"+
+		"\n from  slash_image_box i, slash_dataset ds where deleted= false and (portal_user = ? or is_public = true) and ds.resource_path = 'file:'|| i.actual_location || '.ppm' )"+
 		"\n union "+
 		"\n (select distinct i.image_id,  i.ipath,  i.attribution,  i.contact,  i.description,  i.email,  i.license,  i.portal_user,  i.modified_time,  i.actual_location,  i.wib_url ,  i.x_max,  i.y_max,  i.z_max, ds.dataset_id "+
 		"\n from  slash_image_box i, slash_dataset ds where deleted= false and portal_user = ?  and ds.actual_location = i.actual_location) union "+
@@ -281,10 +283,18 @@ public class SlashDBUtil
 
 		
 		ResultSet rs = ps.executeQuery();
+		
+		HashMap<String, String> umap = new HashMap<String,String>();
 		while(rs.next())
 		{
 			SlashImage image = new SlashImage();
+			
 			long imageID = rs.getLong("image_id");
+			if(umap.containsKey(imageID+""))
+				continue;
+			else
+				umap.put(imageID+"", imageID+"");
+			
 			String ipath = rs.getString("ipath");
 			String attr = rs.getString("attribution");
 			String contact = rs.getString("contact");
